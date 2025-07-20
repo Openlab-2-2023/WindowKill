@@ -203,7 +203,7 @@ Zhrnutie projektu to jednotlivých bodov
 -   [ ] Other
     -   [x] ? Good Soundtrack
         -   [x] Stop music on game over
-        -   [ ] ~~Disable playback start/stop with multimedia keys~~ - tested => event is not reaching app and cannot be blocked by JavaScript
+        -   [ ] ~~Disable playback start/stop with multimedia keys~~ - tested => event is not reaching app and cannot be blocked by JavaScript/TypeScript
 -   [ ] ! Fix
     -   [x] !! Correctly set window size on restart
     -   [ ] Fix glitches on resize
@@ -212,6 +212,19 @@ Zhrnutie projektu to jednotlivých bodov
     -   [x] **Temporal fix:** Incorrect window position when scaling is applied on Windows: When Windows uses display scaling above 100%, it creates a mismatch between physical and logical pixel coordinates. This affects how Tauri handles window positioning
     -   [x] !! In version 0.2.2 window is not resizing to center, but to top left corner of the screen.
     -   [x] ! Exclude some colors for enemy
+-   [ ] Typescript migration
+    -   [ ] Fix all errors
+    -   [x] Update links in html files
+        -   [x] Update links to scripts in html when migrating to TypeScript
+    -   [x] Update Options Volume to use `number` instead of `string` **! NOT tested**
+    -   [ ] Remove duplicate null checks / update declarations (mainly in `gameUtils.ts`)
+    -   [ ] Update game to version `0.7.0` when finished migrating to TypeScript
+    -   [x] Update alert to `Dialog` [plugin](https://tauri.app/plugin/dialog/) **Only for display scaling pop-up**
+    -   [x] Try implement `Updater` [plugin](https://tauri.app/plugin/updater/)
+    -   [x] Try implement `Single Instance` [plugin](https://tauri.app/plugin/single-instance/)
+    -   [ ] Set all variable types to explicit
+    -   [ ] Try creating custom type for `sync-message` events
+    -   [ ] Clean up Tauri permissions in `tauri.conf.json`
 
 ## Development
 

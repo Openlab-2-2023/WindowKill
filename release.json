@@ -1,0 +1,11 @@
+{
+  "version": "0.7.0",
+  "notes": "TypeScript Migration",
+  "pub_date": "2025-07-20T11:00:33+01:00",
+  "platforms": {
+    "windows-x86_64": {
+      "signature": "your_signature_here",
+      "url": "https://github.com/martasskv5/WindowKill/releases/download/v0.7.0/WindowKill_Setup_x86_64.msi"
+    }
+  }
+}

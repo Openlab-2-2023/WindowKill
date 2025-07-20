@@ -1,10 +1,13 @@
 {
     "$schema": "https://schema.tauri.app/config/2",
     "productName": "windowkill",
-    "version": "0.6.2",
-    "identifier": "com.windowkill.app",
+    "version": "0.7.0",
+    "identifier": "martas.windowkill",
     "build": {
-        "frontendDist": "../src"
+        "beforeDevCommand": "npm run dev",
+        "devUrl": "http://localhost:1420",
+        "beforeBuildCommand": "npm run build",
+        "frontendDist": "../dist"
     },
     "app": {
         "withGlobalTauri": true,
@@ -32,6 +35,16 @@
         "windows": {
             "nsis": {
                 "installMode": "currentUser"
+            }
+        },
+        "createUpdaterArtifacts": true
+    },
+    "plugins": {
+        "updater": {
+            "pubkey": "dW50cnVzdGVkIGNvbW1lbnQ6IG1pbmlzaWduIHB1YmxpYyBrZXk6IEYxQ0ZEMEFBNjc0RjQ1MTcKUldRWFJVOW5xdERQOFpycm4vdUJ2OFk4bkpRcUxRMndocnk1SGVwSkFRUmlIb2YvbDl6YjVYanoK",
+            "endpoints": ["https://github.com/martasskv5/WindowKill/releases/latest/download/release.json"],
+            "windows": {
+                "installMode": "passive"
             }
         }
     }
